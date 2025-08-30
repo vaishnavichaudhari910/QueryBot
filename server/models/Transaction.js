@@ -16,7 +16,7 @@ const TransactionSchema = new mongoose.Schema({
         type:Number,required:true
     },
     isPaid:{
-        type:Boolean,required:false
+        type:Boolean,default:false
     },
     
 },

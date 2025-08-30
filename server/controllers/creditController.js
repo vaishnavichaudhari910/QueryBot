@@ -59,7 +59,7 @@ export const purchasePlan = async (req, res) => {
       planId:plan._id,
       amount:plan.price,
       credits:plan.credits,
-      isPaid:false   
+      isPaid:false  
    
     });
    

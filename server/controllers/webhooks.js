@@ -1,5 +1,5 @@
 import Stripe from "stripe";
-import Transactiom from "../models/Transaction.js";
+import Transaction from "../models/Transaction.js";
 import User from "../models/User.js";
 export const stripeWebhooks=async (request,response)=>{
    const stripe=new Stripe(process.env.STRIPE_SECRET_KEY)
@@ -7,7 +7,7 @@ export const stripeWebhooks=async (request,response)=>{
    let event;
    try{
        event=stripe.webhooks.constructEvent(request.body,sig,process.env.STRIPE_WEBHOOK_SECRET)
-       console.log(event)
+      // console.log(event)
    }catch(error)
    {
         return response.status(400).send(`Webhook Errror: ${error.message}`)
@@ -20,15 +20,15 @@ export const stripeWebhooks=async (request,response)=>{
                 payment_intent:paymentIntent.id,
             })
             const session=sessionList.data[0];
-            const {transationId,appId}=session.metadata;
+            const {transactionId,appId}=session.metadata;
 
             if(appId ==='querybot'){
-                const transaction=await Transactiom.findOne({_id:transationId,isPaid:false})
+                const transaction=await Transaction.findOne({_id:transactionId,isPaid:false})
 
                 //update credits in user account
                 await User.updateOne({_id:transaction.userId},{$inc:{credits:transaction.credits}})
                 //update isPaid in transaction
-                await Transactiom.updateOne({_id:transaction._userId},{$inc:{credits:transaction.credits}})
+             // await Transaction.updateOne({_id:transaction._userId},{$inc:{credits:transaction.credits}})
               
                 //Update credit Payment Status
                 transaction.isPaid=true;
