@@ -21,6 +21,6 @@ Built with a modern full-stack architecture, it is designed to be fast, scalable
 - **Auth:** Clerk  
 - **AI Services:** Gemini API (for text), Image API (for image generation)  
 - **Payments:** Stripe (for premium credits)  
-- **Database:** PostgreSQL  
+- **Database:**  PostgreSQL  
 
 
