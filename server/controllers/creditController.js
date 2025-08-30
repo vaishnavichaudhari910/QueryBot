@@ -78,10 +78,10 @@ export const purchasePlan = async (req, res) => {
     },
   ],
   mode: 'payment',
-    // success_url: `${origin}/loading`,
-    // cancel_url: `${origin}`,
-    success_url: `${origin.replace(/\/$/, '')}/loading`,  // removes trailing slash
-cancel_url: `${origin.replace(/\/$/, '')}`,
+    success_url: `${origin}/loading`,
+    cancel_url: `${origin}`,
+//     success_url: `${origin.replace(/\/$/, '')}/loading`,  // removes trailing slash
+// cancel_url: `${origin.replace(/\/$/, '')}`,
     metadata: {transactionId:transaction._id.toString(),appId:'querybot'},
     expires_at:Math.floor(Date.now() / 1000) + 30 * 60,//Expires in 30 minutes
 });

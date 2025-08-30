@@ -17,8 +17,10 @@
 }
 
 .loader div:nth-child(2){
-  annimation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .loader div:nth-child(3){
-  annimation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
+
+
