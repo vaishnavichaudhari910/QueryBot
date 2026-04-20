@@ -3,8 +3,7 @@
 
 ### AI-Powered Chat & Image Generation Platform
 
-🔗 **Live Demo:** https://query-bot-beta.vercel.app/
-
+🔗 **Live Demo:**https://query-bot-tawny.vercel.app/
 ---
 
 ## 📌 Overview
