@@ -55,7 +55,7 @@ const Login = () => {
           className="border border-gray-200 rounded w-full p-2 mt-1 outline-purple-700"
           type="email"
           required
-        />
+      />
       </div>
       <div className="w-full ">
         <p>Password</p>
