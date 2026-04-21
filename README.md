@@ -3,8 +3,7 @@
 
 ### AI-Powered Chat & Image Generation Platform
 
-🔗 **Live Demo:** https://query-bot-beta.vercel.app/
-
+🔗 **Live Demo:**https://query-bot-tawny.vercel.app/
 ---
 
 ## 📌 Overview
@@ -71,6 +70,7 @@
 <img width="1919" height="855" alt="image" src="https://github.com/user-attachments/assets/707964d1-9538-4432-ba83-e93549dbbac1" />
 
 <img width="1919" height="863" alt="image" src="https://github.com/user-attachments/assets/f5ca030a-71ee-4915-bf8e-8fab13eb2aa0" />
+<img width="1919" height="861" alt="image" src="https://github.com/user-attachments/assets/d15c0fe5-a2f1-47fe-8ef7-24656dd00d6a" />
 
 
 ---
