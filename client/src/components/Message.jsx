@@ -5,6 +5,8 @@ import Markdown from 'react-markdown';
 import Prism from 'prismjs';
 const Message = ({ message }) => {
 
+
+  
   useEffect(()=>{
     Prism.highlightAll();
   },[message.content])
