@@ -47,13 +47,21 @@ const App = () => {
         </div> 
       ) : (
         <div
-          className="h-screen w-screen 
-                  bg-gradient-to-b from-[#f9f7f7] from-[#f9f7f7]    
-                  dark:from-[#000000] dark:to-[#08061e]          /* Dark Mode Black-Blue */
-                  flex items-center justify-center"
-        >
-          <Login />
-        </div>
+  className="h-screen w-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
+  style={{
+    backgroundImage: "url('/bg.png')",
+  }}
+>
+  <Login />
+</div>
+        // <div
+        //   className="h-screen w-screen 
+        //           bg-gradient-to-b from-[#f9f7f7] from-[#f9f7f7]    
+        //           dark:from-[#000000] dark:to-[#08061e]          /* Dark Mode Black-Blue */
+        //           flex items-center justify-center"
+        // >
+        //   <Login />
+        // </div>
       )}
     </>
   );
