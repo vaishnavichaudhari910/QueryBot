@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Mail, Lock, User, Eye, EyeOff } from "lucide-react";
+import { Mail, Lock, User, Eye, EyeOff, WandSparkles  } from "lucide-react";
 import toast from "react-hot-toast";
 import { useAppContext } from "../context/AppContext";
 
@@ -40,64 +40,74 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#050816] flex items-center justify-center px-6 py-8 relative overflow-hidden">
+   <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-4 sm:py-8 relative overflow-hidden">
+      
+    <div
+className="
+w-full
+max-w-4xl
+rounded-[32px]
+overflow-hidden
+border border-cyan-500/20
+bg-[#06101f]
 
-      {/* Purple Glow */}
-      <div className="absolute top-[-150px] left-[-150px] w-[500px] h-[500px] bg-purple-700/40 rounded-full blur-[180px]" />
 
-      {/* Cyan Glow */}
-      <div className="absolute bottom-[-150px] right-[-150px] w-[500px] h-[500px] bg-cyan-500/30 rounded-full blur-[180px]" />
+grid grid-cols-1 md:grid-cols-2
+"
+>   
+       {/* LEFT SIDE */}
+<div
+  className="
+  relative
+  bg-[linear-gradient(135deg,#5B2DBD_0%,#47259A_20%,#2F1D73_45%,#1D1F57_70%,#0BBFBF_100%)]
+  flex flex-col justify-center items-center text-center p-10
+"
+>  {/* Logo Card */}
+   <div className="w-40 h-40 rounded-[30px] bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center shadow-2xl">
+    <img
+      src="/favicon.png"
+      alt="QueryBot"
+      className="w-24 h-24 object-contain"
+    />
+  </div> 
+  {/* <div className="w-40 h-40 rounded-[30px] bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center shadow-2xl">
+    <WandSparkles size={80} className="text-white" />
+  </div> */}
+  {/* Heading */}
+  <h1 className="text-[56px] font-extrabold text-white tracking-tight">
+  QueryBot
+</h1>
 
-      {/* Center Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,255,255,0.05),transparent_60%)]" />
+  {/* Subtitle */}
+  <p className="mt-4 text-white/80 text-lg leading-relaxed">
+    Your AI-Powered Assistant
+    <br />
+    for Smarter Solutions
+  </p>
 
-      <div className="w-full max-w-5xl min-h-[85vh] rounded-[32px] overflow-hidden border border-white/10 backdrop-blur-2xl bg-white/5 shadow-[0_0_80px_rgba(139,92,246,0.2)] grid md:grid-cols-2 relative z-10">
+  {/* Features */}
+  <div className="mt-12 space-y-6">
+    <div className="flex items-center gap-3 text-white/90">
+      <span className="text-purple-200 text-lg">⚡</span>
+      <span>Fast & Smart</span>
+    </div>
 
-        {/* ── LEFT SIDE ── */}
-        <div className="relative bg-gradient-to-br from-purple-700 via-indigo-500 to-cyan-500 p-12 flex flex-col justify-center items-center text-center">
+    <div className="flex items-center gap-3 text-white/90">
+      <span className="text-purple-200 text-lg">🛡️</span>
+      <span>Secure & Private</span>
+    </div>
 
-          <div className="bg-white/10 backdrop-blur-xl p-6 rounded-[28px] shadow-2xl">
-            <img
-              src="/Query_bot_logo.png"
-              alt="QueryBot"
-              className="w-28 h-28 object-contain"
-            />
-          </div>
-
-          <h1 className="text-5xl font-extrabold mt-8 text-white tracking-tight">
-            QueryBot
-          </h1>
-
-          <p className="text-white/80 text-base mt-3">
-            Your AI-Powered Assistant<br />for Smarter Solutions
-          </p>
-
-          <div className="mt-10 space-y-5 text-white text-base w-full max-w-[220px]">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-xl bg-white/15 flex items-center justify-center text-sm flex-shrink-0">
-                ⚡
-              </div>
-              <span>Fast &amp; Smart Responses</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-xl bg-white/15 flex items-center justify-center text-sm flex-shrink-0">
-                🔒
-              </div>
-              <span>Secure &amp; Private</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-xl bg-white/15 flex items-center justify-center text-sm flex-shrink-0">
-                💬
-              </div>
-              <span>24/7 AI Support</span>
-            </div>
-          </div>
-        </div>
+    <div className="flex items-center gap-3 text-white/90">
+      <span className="text-purple-200 text-lg">💬</span>
+      <span>24/7 Support</span>
+    </div>
+  </div>
+</div>
 
         {/* ── RIGHT SIDE ── */}
-        <div className="bg-[#07111f]/95 flex flex-col justify-center px-10 py-10 text-white">
+        <div className="bg-[#07111f]/95 flex flex-col justify-center px-5 sm:px-8 lg:px-10 py-8 sm:py-10 text-white">
 
-          <h2 className="text-4xl font-bold mb-2">
+          <h2 className="text-3xl sm:text-4xl font-bold">
             {state === "login" ? "Welcome Back 👋" : "Create Account 🚀"}
           </h2>
 
