@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Mail, Lock, User, Eye, EyeOff, WandSparkles  } from "lucide-react";
+import { Mail, Lock, User, Eye, EyeOff, WandSparkles } from "lucide-react";
 import toast from "react-hot-toast";
 import { useAppContext } from "../context/AppContext";
 
@@ -16,10 +16,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const url =
-      state === "login"
-        ? "/api/user/login"
-        : "/api/user/register";
+    const url = state === "login" ? "/api/user/login" : "/api/user/register";
 
     try {
       const { data } = await axios.post(url, {
@@ -40,74 +37,121 @@ const Login = () => {
   };
 
   return (
-   <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-4 sm:py-8 relative overflow-hidden">
-      
-    <div
-className="
-w-full
-max-w-4xl
-rounded-[32px]
-overflow-hidden
-border border-cyan-500/20
-bg-[#06101f]
-
-
-grid grid-cols-1 md:grid-cols-2
+    <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-4 sm:py-8 relative overflow-hidden">
+      <div
+        className="
+  w-full
+  max-w-5xl
+  rounded-3xl
+  overflow-hidden
+  border border-cyan-500/20
+  bg-[#06101f]
+  grid grid-cols-1 lg:grid-cols-2
+  shadow-2xl
 "
->   
-       {/* LEFT SIDE */}
-<div
+      >
+        {/* LEFT SIDE */}
+        <div
   className="
+  hidden lg:flex
   relative
   bg-[linear-gradient(135deg,#5B2DBD_0%,#47259A_20%,#2F1D73_45%,#1D1F57_70%,#0BBFBF_100%)]
-  flex flex-col justify-center items-center text-center p-10
+  flex flex-col justify-center items-center text-center
+  px-6 py-10
+  sm:px-8 sm:py-12
+  lg:px-10 lg:py-16
 "
->  {/* Logo Card */}
-   <div className="w-40 h-40 rounded-[30px] bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center shadow-2xl">
-    <img
-      src="/favicon.png"
-      alt="QueryBot"
-      className="w-24 h-24 object-contain"
-    />
-  </div> 
-  {/* <div className="w-40 h-40 rounded-[30px] bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center shadow-2xl">
+>
+          {" "}
+          {/* Logo Card */}
+          <div className="
+w-24 h-24
+sm:w-32 sm:h-32
+lg:w-40 lg:h-40
+rounded-[30px]
+bg-white/10
+backdrop-blur-xl
+border border-white/20
+flex items-center justify-center
+shadow-2xl
+">
+     <img
+  src="/favicon.png"
+  alt="QueryBot"
+  className="
+  w-14 h-14
+  sm:w-20 sm:h-20
+  lg:w-24 lg:h-24
+  object-contain
+"
+/>
+          </div>
+          {/* <div className="w-40 h-40 rounded-[30px] bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center shadow-2xl">
     <WandSparkles size={80} className="text-white" />
   </div> */}
-  {/* Heading */}
-  <h1 className="text-[56px] font-extrabold text-white tracking-tight">
-  QueryBot
-</h1>
+          {/* Heading */}
+         <h1 className="
+text-4xl
+sm:text-5xl
+lg:text-6xl
+font-extrabold
+text-white
+tracking-tight
+mt-6
+">   QueryBot
+          </h1>
+          {/* Subtitle */}
+          <p className="
+mt-4
+text-white/80
+text-sm
+sm:text-base
+lg:text-lg
+leading-relaxed
+">   Your AI-Powered Assistant
+            <br />
+            for Smarter Solutions
+          </p>
+          {/* Features */}
+        <div className="
+mt-8
+lg:mt-12
+space-y-4
+lg:space-y-6
+">
+            <div className="flex items-center gap-3 text-white/90">
+              <span className="text-purple-200 text-lg">⚡</span>
+              <span>Fast & Smart</span>
+            </div>
 
-  {/* Subtitle */}
-  <p className="mt-4 text-white/80 text-lg leading-relaxed">
-    Your AI-Powered Assistant
-    <br />
-    for Smarter Solutions
-  </p>
+            <div className="flex items-center gap-3 text-white/90">
+              <span className="text-purple-200 text-lg">🛡️</span>
+              <span>Secure & Private</span>
+            </div>
 
-  {/* Features */}
-  <div className="mt-12 space-y-6">
-    <div className="flex items-center gap-3 text-white/90">
-      <span className="text-purple-200 text-lg">⚡</span>
-      <span>Fast & Smart</span>
-    </div>
-
-    <div className="flex items-center gap-3 text-white/90">
-      <span className="text-purple-200 text-lg">🛡️</span>
-      <span>Secure & Private</span>
-    </div>
-
-    <div className="flex items-center gap-3 text-white/90">
-      <span className="text-purple-200 text-lg">💬</span>
-      <span>24/7 Support</span>
-    </div>
-  </div>
-</div>
+            <div className="flex items-center gap-3 text-white/90">
+              <span className="text-purple-200 text-lg">💬</span>
+              <span>24/7 Support</span>
+            </div>
+          </div>
+        </div>
 
         {/* ── RIGHT SIDE ── */}
-        <div className="bg-[#07111f]/95 flex flex-col justify-center px-5 sm:px-8 lg:px-10 py-8 sm:py-10 text-white">
-
-          <h2 className="text-3xl sm:text-4xl font-bold">
+       <div
+  className="
+  bg-[#07111f]/95
+  flex flex-col justify-center
+  px-5 py-8
+  sm:px-8 sm:py-10
+  lg:px-12 lg:py-12
+  text-white
+"
+>    <h2 className="
+text-2xl
+sm:text-3xl
+lg:text-4xl
+font-bold
+">
             {state === "login" ? "Welcome Back 👋" : "Create Account 🚀"}
           </h2>
 
@@ -118,7 +162,6 @@ grid grid-cols-1 md:grid-cols-2
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
-
             {/* Name Field (Register only) */}
             {state === "register" && (
               <div>
@@ -228,7 +271,6 @@ grid grid-cols-1 md:grid-cols-2
                 {state === "login" ? "Create Account" : "Login"}
               </span>
             </p>
-
           </form>
         </div>
       </div>
