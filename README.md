@@ -1,6 +1,5 @@
 # QueryBot 🤖✨
 
-
 ### AI-Powered Chat & Image Generation Platform
 
 🔗 Live Demo:https://query-bot-tawny.vercel.app/
